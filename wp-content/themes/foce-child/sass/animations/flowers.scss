@@ -1,0 +1,23 @@
+ .story__article::after {
+    @include infinite-rotate-animation;
+}
+
+.story h2::after {
+    @include infinite-rotate-animation;
+}
+
+#studio h2::after {
+    @include infinite-rotate-animation;
+}
+
+#studio h2::before {
+    @include infinite-rotate-animation;
+}
+
+.site-footer::before {
+    @include infinite-rotate-animation;
+}
+
+.site-footer::after {
+    @include infinite-rotate-animation;
+}

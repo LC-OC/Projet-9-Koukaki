@@ -1,0 +1,18 @@
+#festival {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    h3 {
+        background-image: url("../assets/images/orange_background_festival.png");
+        text-align: left;
+        padding: 5rem;
+        width: 60%;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        
+}
+    img {
+        height: 150px;
+    }
+    
+}
