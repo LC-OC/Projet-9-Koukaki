@@ -21,3 +21,7 @@
 .site-footer::after {
     @include infinite-rotate-animation;
 }
+
+.site-footer ul::after {
+    @include infinite-rotate-animation
+}

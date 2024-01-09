@@ -17,6 +17,9 @@ if ( get_stylesheet() !== get_template() ) {
 }
 
 function animations_script() {
-    wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/animations.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/animations.js', array( 'jquery' ),'',true );
 }
 add_action( 'wp_enqueue_scripts', 'animations_script' );
+
+//wp_enqueue_script( 'script', get_template_directory_uri() . '/js/animations.js', array( 'jquery' ), 1.1, true);
+//wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/animations.js', array( 'jquery' ),'',true );

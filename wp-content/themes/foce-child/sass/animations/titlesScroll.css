@@ -1,13 +1,26 @@
-.title_animation_scroll {
-  animation: fade-in-move-down 0.7s;
+.title_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-@keyframes fade-in-move-down {
+
+.title_animation_scroll_one {
+  margin-right: 10px;
+  animation: fade-in-move-up 1s ease;
+}
+
+.title_animation_scroll_two {
+  animation: fade-in-move-up 1s ease;
+  animation-delay: 150ms;
+}
+
+@keyframes fade-in-move-up {
   0% {
+    transform: translate(0px, 100px);
     opacity: 0;
-    transform: translateY(3rem);
   }
   100% {
+    transform: translate(0px, 0);
     opacity: 1;
-    transform: translateY(0);
   }
 }/*# sourceMappingURL=titlesScroll.css.map */

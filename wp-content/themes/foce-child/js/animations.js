@@ -1,16 +1,40 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const titleTest = entry.target.querySelector(".title_animation");
+const firstPartTitleAnimation = document.querySelectorAll(
+  ".first_part_title_animation"
+);
+const secondPartTitleAnimation = document.querySelectorAll(
+  ".second_part_title_animation"
+);
 
-    if (entry.isIntersecting) {
-      titleTest.classList.add("title_animation_scroll");
-      console.log(titleTest);
-      return; // if we added the class, exit the function
-    }
+function animationTitleOne() {
+  const observerFirstPart = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("title_animation_scroll_one");
+        return;
+      }
 
-    // We're not intersecting, so remove the class!
-    titleTest.classList.remove("title_animation_scroll");
+      entry.target.classList.remove("title_animation_scroll_one");
+    });
   });
-});
+  firstPartTitleAnimation.forEach((element) =>
+    observerFirstPart.observe(element)
+  );
+}
+function animationTitleTwo() {
+  const observerSecondPart = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("title_animation_scroll_two");
+        return;
+      }
 
-observer.observe(document.querySelector("#festival"));
+      entry.target.classList.remove("title_animation_scroll_two");
+    });
+  });
+  secondPartTitleAnimation.forEach((element) =>
+    observerSecondPart.observe(element)
+  );
+}
+
+animationTitleOne();
+animationTitleTwo();
