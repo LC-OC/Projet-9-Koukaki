@@ -5,6 +5,9 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
+            <video playsinline autoplay muted loop id="banner-video">
+                <source src="wp-content\themes\foce-child\assets\video\koukaki-header-video.mp4">
+            </video>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story animation_container">
@@ -22,9 +25,9 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters">
-                <div class="main-character animation_container">
-                    <h3 class="title_animation title_section"><div class="first_part_title_animation">Les </div><div class="second_part_title_animation">personnages</div></h3>
+            <article id="characters" class="animation_container">
+                <div class="main-character ">
+                    <h3 class="title_animation title_section"><div class="first_part_title_animation" id="title_characters">Les </div><div class="second_part_title_animation">personnages</div></h3>
                     <?php
                     $main_character = $characters_query->posts[0];
                     echo '<figure>';
@@ -48,8 +51,8 @@ get_header();
                     ?>
                 </div>
             </article>
-            <article id="place">
-                <div class="animation_container">
+            <article id="place" class="animation_container">
+                <div>
                     <h3 class="title_animation title_section"><div class="first_part_title_animation">Le </div><div class="second_part_title_animation"> Lieu</div></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
@@ -67,9 +70,12 @@ get_header();
             </section>
        <?php 
         get_template_part( './template-parts/festival-section' );
-    ?>
+        ?>
+        <?php 
+        get_template_part( './template-parts/character-carousel' );
+        ?>
     </main><!-- #main -->
-
+    
  
 
 <?php

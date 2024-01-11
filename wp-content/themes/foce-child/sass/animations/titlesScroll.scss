@@ -4,25 +4,12 @@
   justify-content: center;
 }
 
+.title_animation_scroll_one {
+    margin-right: 10px;
+    @include animation-fade-in-move-up;      
+}
 
-    .title_animation_scroll_one {
-      margin-right: 10px;
-      animation: fade-in-move-up 1s ease;
-    }
-
-
-  .title_animation_scroll_two {
-    animation: fade-in-move-up 1s ease;
-    animation-delay: 150ms;
-  }
-
-@keyframes fade-in-move-up {
-  0% {
-    transform:translate(0px, 100px); 
-    opacity: 0;
-  }
-  100%{
-    transform:translate(0px, 0); 
-    opacity: 1;
-  }
-    }
+.title_animation_scroll_two {
+  @include animation-fade-in-move-up;
+  animation-delay: 150ms;
+}

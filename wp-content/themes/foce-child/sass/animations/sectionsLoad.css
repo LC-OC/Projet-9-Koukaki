@@ -1,0 +1,14 @@
+.banner {
+  animation: fade-in-move-down 1s ease;
+}
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=sectionsLoad.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":["titlesScroll.scss","titlesScroll.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;ACCF;;ADGI;EACE,kBAAA;EACA,kCAAA;ACAN;;ADIE;EACE,kCAAA;EACA,sBAAA;ACDJ;;ADIA;EACE;IACE,gCAAA;IACA,UAAA;ECDF;EDGA;IACE,4BAAA;IACA,UAAA;ECDF;AACF","file":"titlesScroll.css"}
+{"version":3,"sources":["titlesScroll.scss","titlesScroll.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;ACCF;;ADGI;EACE,kBAAA;ACAN;;ADKE;EACE,kCAAA;EACA,sBAAA;ACFJ;;ADKA;EACE;IACE,gCAAA;IACA,UAAA;ECFF;EDIA;IACE,4BAAA;IACA,UAAA;ECFF;AACF","file":"titlesScroll.css"}
