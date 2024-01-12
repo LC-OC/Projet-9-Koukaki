@@ -1,5 +1,5 @@
-const sampleSlider = new Swiper(".slider-container", {
-  // if navigation(arrows) is needed
+const sampleSlider = new Swiper(".sample-slider", {
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -9,3 +9,5 @@ const sampleSlider = new Swiper(".slider-container", {
     el: ".swiper-pagination",
   },
 });
+
+console.log(sampleSlider);
