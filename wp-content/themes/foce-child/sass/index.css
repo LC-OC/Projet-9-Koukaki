@@ -34,6 +34,48 @@
   position: relative;
 }
 
+#carousel_section {
+  all: unset;
+  width: 100%;
+  margin: 6em 6em 0 6em;
+}
+#carousel_section h3 {
+  all: unset;
+  color: white;
+  font-size: 2.5rem;
+  background-image: url("../assets/images/orange_characters.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1em 1.3em;
+  margin: 0;
+  background-position: left;
+  clear: both;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+#carousel_section .title_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.swiper {
+  width: 100%;
+}
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swiper .swiper-slide .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
 .story__article::after {
   animation: rotate-animation 8s infinite linear;
   transform-origin: center center;
