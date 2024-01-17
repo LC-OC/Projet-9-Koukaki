@@ -17,15 +17,8 @@ get_header();
             </article>
             <?php 
                 get_template_part( './template-parts/character-carousel' );
-            ?>
-            <article id="place" class="animation_container">
-                <div>
-                    <h3 class="title_animation title_section"><div class="first_part_title_animation">Le </div><div class="second_part_title_animation"> Lieu</div></h3>
-                    <p><?php echo get_theme_mod('place'); ?></p>
-                </div>
-
-            </article>
-            
+                get_template_part( './template-parts/place-section' );
+            ?>            
         </section>
 
 

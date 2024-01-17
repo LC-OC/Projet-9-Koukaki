@@ -1,0 +1,18 @@
+section.story #place {
+    background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+    #cloud_animation{
+        width: 100%;
+        all: unset;
+        margin-top: 9rem;
+        margin-left: 15rem;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        z-index: 2;
+        .clouds {
+            filter: blur(0.8rem);
+            
+        }
+    }
+}

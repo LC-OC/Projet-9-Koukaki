@@ -12,5 +12,3 @@ const sampleSlider = new Swiper(".sample-slider", {
     slideShadows: false,
   },
 });
-
-console.log(sampleSlider);
