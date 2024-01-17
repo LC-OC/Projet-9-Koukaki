@@ -51,3 +51,12 @@ window.addEventListener("scroll", () => {
   clouds.style.transform = "translateX(" + cloudsPosition + "px)";
   // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
+
+// menu
+
+const menuIcon = document.getElementById("icon-menu");
+function openMenu() {
+  menuIcon.classList.remove("fa-bars");
+  menuIcon.classList.add("fa-xmark");
+}
+menuIcon.addEventListener("click", openMenu);

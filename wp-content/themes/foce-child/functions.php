@@ -23,6 +23,7 @@ function scripts() {
     wp_enqueue_script( 'script-animation', get_stylesheet_directory_uri() . '/js/animations.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'script-carousel', get_stylesheet_directory_uri() . '/js/characterCarousel.js', array( 'jquery' ),'',true );
+
     
     
     
