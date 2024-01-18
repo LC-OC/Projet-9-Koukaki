@@ -15,7 +15,7 @@
   height: 150px;
 }
 
-.banner {
+section.banner {
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -23,14 +23,14 @@
   align-items: center;
   justify-content: center;
 }
-.banner #banner-video {
+section.banner #banner-video {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
-.banner img {
+section.banner img {
   position: relative;
 }
 
@@ -76,7 +76,7 @@
   width: 100%;
 }
 
-#navigation {
+#nav {
   height: 80px;
   background-color: #FFD5A2;
   display: flex;
@@ -84,13 +84,99 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: fixed;
+  z-index: 100;
 }
-#navigation .site-title {
+#nav .site-title {
   font-family: "Quicksand", sans-serif;
   font-size: 21.5px;
 }
-#navigation .site-title a {
+#nav .site-title a {
   text-decoration: none;
+}
+#nav #menu_icon {
+  cursor: pointer;
+  position: absolute;
+  right: 45px;
+  font-size: 20px;
+  color: black;
+}
+#nav #menu_icon #icon-menu-close {
+  display: none;
+  font-size: 30px;
+}
+
+#menu-content {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+#menu-content::before {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: 92%;
+  top: 14rem;
+  animation: rotate-animation 8s infinite linear;
+  transform-origin: center center;
+}
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#menu-content::after {
+  content: url("../assets/images/hibiscus.png");
+  position: absolute;
+  left: 80%;
+  bottom: -20rem;
+  animation: rotate-animation 8s infinite linear;
+  transform-origin: center center;
+}
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#menu-content img {
+  margin-right: -6rem;
+}
+#menu-content li {
+  list-style: none;
+  font-size: 64px;
+  color: black;
+  padding: 1rem 0;
+}
+#menu-content li a {
+  text-decoration: none;
+}
+#menu-content li a:hover {
+  text-shadow: #FF5C00 1px 0 10px;
+  color: black;
+}
+#menu-content p {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: -6rem;
+  margin-bottom: -10rem;
+}
+#menu-content.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10rem;
+  background-color: #FFF5E9;
 }
 
 .story__article::after {
@@ -193,7 +279,7 @@ section.story #place #cloud_animation {
   width: 100%;
   all: unset;
   margin-top: 5rem;
-  margin-left: 20rem;
+  margin-left: 30rem;
   position: absolute;
   display: flex;
   flex-direction: row;

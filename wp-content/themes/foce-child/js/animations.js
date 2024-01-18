@@ -54,9 +54,24 @@ window.addEventListener("scroll", () => {
 
 // menu
 
-const menuIcon = document.getElementById("icon-menu");
-function openMenu() {
-  menuIcon.classList.remove("fa-bars");
-  menuIcon.classList.add("fa-xmark");
+let menuIconBurger = document.getElementById("icon-menu-burger");
+let menuIconClose = document.getElementById("icon-menu-close");
+let menuContent = document.getElementById("menu-content");
+let menuLinks = document.querySelectorAll(".link-menu");
+
+function hideMenu() {
+  menuIconClose.style.display = "none";
+  menuIconBurger.style.display = "block";
+  menuContent.classList.remove("overlay");
 }
-menuIcon.addEventListener("click", openMenu);
+
+menuIconBurger.addEventListener("click", function displayMenu() {
+  menuIconBurger.style.display = "none";
+  menuIconClose.style.display = "block";
+  menuContent.classList.toggle("overlay");
+});
+menuIconClose.addEventListener("click", hideMenu);
+
+menuLinks.forEach(function (menuLink) {
+  menuLink.addEventListener("click", hideMenu);
+});

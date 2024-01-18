@@ -10,9 +10,9 @@ get_header();
             </video>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="#story" class="story animation_container">
+        <section id="story-koukaki" class="story animation_container">
             <h2 class="title_section"><div class="first_part_title_animation">L'histoire</div></h2>
-            <article id="" class="story__article">
+            <article id="characters-koukaki" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <?php 

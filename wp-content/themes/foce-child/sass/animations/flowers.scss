@@ -23,5 +23,6 @@
 }
 
 .site-footer ul::after {
-    @include infinite-rotate-animation
+    @include infinite-rotate-animation;
 }
+

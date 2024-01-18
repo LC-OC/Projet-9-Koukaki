@@ -1,4 +1,4 @@
-#navigation {
+#nav {
     height: 80px;
     background-color: #FFD5A2;
     display: flex;
@@ -6,11 +6,82 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: fixed;
+    z-index: 100;
     .site-title {
         font-family: "Quicksand", sans-serif;
         font-size: 21.5px;
         a {
             text-decoration: none;
         }
+    }
+    #menu_icon {
+        cursor: pointer;
+        position: absolute;
+        right: 45px;
+        font-size: 20px;
+        color: black;
+        #icon-menu-close {
+            display: none;
+            font-size: 30px;
+        }
+    }
+    
+}
+
+#menu-content {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    &::before {
+        content: url("../assets/images/orchid.png");
+        position: absolute; 
+        right: 92%;
+        top: 14rem;
+        @include infinite-rotate-animation;
+    }
+    &::after {
+        content: url("../assets/images/hibiscus.png");
+        position: absolute; 
+        left: 80%;
+        bottom: -20rem;
+        @include infinite-rotate-animation;
+        
+    }
+    img {
+        margin-right: -6rem;
+    }
+    li {
+        list-style:none;
+        font-size: 64px;
+        color: black;
+        padding: 1rem 0;
+        a {
+            text-decoration: none;
+            &:hover {
+                text-shadow: #FF5C00 1px 0 10px;
+                color: black;
+            }
+        }
+        
+    }
+    p {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: -6rem;
+        margin-bottom: -10rem;
+    }
+&.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 10rem;
+    background-color: #FFF5E9;
 }
 }
