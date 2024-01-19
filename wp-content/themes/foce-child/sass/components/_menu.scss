@@ -57,12 +57,14 @@
     }
     img {
         margin-right: -6rem;
+        @include animation-float;
     }
     li {
         list-style:none;
         font-size: 64px;
         color: black;
         padding: 1rem 0;
+        
         a {
             text-decoration: none;
             &:hover {
@@ -72,11 +74,61 @@
         }
         
     }
+    #link-story {
+        &::before {
+            content: url("../assets/images/purple-cat.png");
+            position: absolute; 
+            left: 22%;
+            top: 19rem;
+            @include animation-float;
+        }
+        &::after {
+            content: url("../assets/images/sunflower.png");
+            position: absolute; 
+            right: 13%;
+            top: 16%;
+            @include infinite-rotate-animation;
+        }
+    }
+    #link-characters {
+        &::after {
+            content: url("../assets/images/random_flower.png");
+            position: absolute; 
+            transform: scale(.5);
+            right: -7%;
+            
+        }
+    }
+    #link-place {
+        &::before {
+            content: url("../assets/images/black-cat.png");
+            position: absolute; 
+            right: 18%;
+            top: 50%;
+            @include animation-float;
+        }
+        &::after {
+            content: url("../assets/images/Flower.png");
+            position: absolute; 
+            left: 18%;
+            @include infinite-rotate-animation;
+        }
+    }
+    #link-studio {
+        &::before {
+            content: url("../assets/images/orange-cat.png");
+            position: absolute; 
+            left: 5%;
+            bottom: 5%;
+            @include animation-float;
+        }
+    }
     p {
         text-transform: uppercase;
         font-size: 12px;
-        margin-right: -6rem;
-        margin-bottom: -10rem;
+        right: 44%;
+        position: absolute;
+        bottom: 5%;
     }
 &.overlay {
     visibility: visible;

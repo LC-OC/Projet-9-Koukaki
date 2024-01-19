@@ -13,5 +13,6 @@ section.banner {
     }
     img {
         position: relative;
+        @include animation-float;
     }
 }

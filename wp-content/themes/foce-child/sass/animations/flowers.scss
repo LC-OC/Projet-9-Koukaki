@@ -3,6 +3,7 @@
 }
 
 .story h2::after {
+    transform-origin: 50% 70% 0;
     @include infinite-rotate-animation;
 }
 

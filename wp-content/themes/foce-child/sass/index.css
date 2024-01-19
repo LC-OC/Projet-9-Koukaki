@@ -32,6 +32,18 @@ section.banner #banner-video {
 }
 section.banner img {
   position: relative;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 #carousel_section {
@@ -124,7 +136,6 @@ section.banner img {
   right: 92%;
   top: 14rem;
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -140,7 +151,6 @@ section.banner img {
   left: 80%;
   bottom: -20rem;
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -152,6 +162,18 @@ section.banner img {
 }
 #menu-content img {
   margin-right: -6rem;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 #menu-content li {
   list-style: none;
@@ -166,11 +188,101 @@ section.banner img {
   text-shadow: #FF5C00 1px 0 10px;
   color: black;
 }
+#menu-content #link-story::before {
+  content: url("../assets/images/purple-cat.png");
+  position: absolute;
+  left: 22%;
+  top: 19rem;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+#menu-content #link-story::after {
+  content: url("../assets/images/sunflower.png");
+  position: absolute;
+  right: 13%;
+  top: 16%;
+  animation: rotate-animation 8s infinite linear;
+}
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#menu-content #link-characters::after {
+  content: url("../assets/images/random_flower.png");
+  position: absolute;
+  transform: scale(0.5);
+  right: -7%;
+}
+#menu-content #link-place::before {
+  content: url("../assets/images/black-cat.png");
+  position: absolute;
+  right: 18%;
+  top: 50%;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+#menu-content #link-place::after {
+  content: url("../assets/images/Flower.png");
+  position: absolute;
+  left: 18%;
+  animation: rotate-animation 8s infinite linear;
+}
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#menu-content #link-studio::before {
+  content: url("../assets/images/orange-cat.png");
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 #menu-content p {
   text-transform: uppercase;
   font-size: 12px;
-  margin-right: -6rem;
-  margin-bottom: -10rem;
+  right: 44%;
+  position: absolute;
+  bottom: 5%;
 }
 #menu-content.overlay {
   visibility: visible;
@@ -181,7 +293,6 @@ section.banner img {
 
 .story__article::after {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -193,8 +304,8 @@ section.banner img {
 }
 
 .story h2::after {
+  transform-origin: 50% 70% 0;
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -207,7 +318,6 @@ section.banner img {
 
 #studio h2::after {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -220,7 +330,6 @@ section.banner img {
 
 #studio h2::before {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -233,7 +342,6 @@ section.banner img {
 
 .site-footer::before {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -246,7 +354,6 @@ section.banner img {
 
 .site-footer::after {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {
@@ -259,7 +366,6 @@ section.banner img {
 
 .site-footer ul::after {
   animation: rotate-animation 8s infinite linear;
-  transform-origin: center center;
 }
 @keyframes rotate-animation {
   from {

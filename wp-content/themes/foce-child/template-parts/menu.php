@@ -10,16 +10,16 @@
 <div id="menu-content">
     <img src="wp-content\themes\foce-child\assets\images\logo-koukaki.png" alt="Logo Fleurs d'oranger & chats errants">
     <ul id="menu-links">
-        <li class="link-menu">
+        <li class="link-menu" id="link-story">
             <a href="#story-koukaki">Histoire</a>
         </li>
-        <li class="link-menu">
+        <li class="link-menu" id="link-characters">
             <a href="#characters-koukaki">Personnages</a>
         </li>
-        <li class="link-menu">
+        <li class="link-menu" id="link-place">
             <a href="#place">Lieu</a>
         </li>
-        <li class="link-menu">
+        <li class="link-menu" id="link-studio">
             <a href="#studio">Studio Koukaki</a>
         </li>
    </ul>
