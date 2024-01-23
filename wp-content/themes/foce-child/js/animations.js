@@ -43,7 +43,9 @@ animationTitleTwo();
 
 // cloud animation
 let clouds = document.getElementById("cloud_animation");
-
+let placeContainer = document.getElementById("place").getBoundingClientRect();
+console.log(placeContainer);
+/*
 window.addEventListener("scroll", () => {
   let { scrollY } = window;
   console.log(scrollY);
@@ -51,7 +53,26 @@ window.addEventListener("scroll", () => {
   clouds.style.transform = "translateX(" + cloudsPosition + "px)";
   // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
+*/
 
+/*
+const observerTest = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      window.addEventListener("scroll", () => {
+        let { scrollY } = window;
+        let cloudsPosition = Math.min(0.1 * scrollY, 300);
+        clouds.style.transform = "translateX(" + cloudsPosition + "px)";
+        console.log(cloudsPosition);
+        // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
+      });
+      return; // if we added the class, exit the function
+    }
+  });
+});
+
+observerTest.observe(document.querySelector("#place"));
+*/
 // menu
 
 let menuIconBurger = document.getElementById("icon-menu-burger");

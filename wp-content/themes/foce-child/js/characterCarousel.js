@@ -3,12 +3,13 @@ const sampleSlider = new Swiper(".sample-slider", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 3,
+  spaceBetween: 10,
   loop: "true",
   coverflowEffect: {
-    rotate: 50,
+    rotate: 0,
     stretch: 0,
-    depth: 100,
-    modifier: 1,
+    depth: 0,
+    modifier: 0,
     slideShadows: false,
   },
 });

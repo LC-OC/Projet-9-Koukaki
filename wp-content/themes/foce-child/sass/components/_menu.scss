@@ -5,9 +5,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
     position: fixed;
     z-index: 100;
+    width: 100%;
+    max-width: 1440px;
     .site-title {
         font-family: "Quicksand", sans-serif;
         font-size: 21.5px;
@@ -31,7 +32,8 @@
 
 #menu-content {
     z-index: 1;
-    min-width: 100%;
+    width: 100%;
+    max-width: 1440px;
     min-height: 100%;
     position: fixed;
     top: 0;
@@ -51,7 +53,7 @@
         content: url("../assets/images/hibiscus.png");
         position: absolute; 
         left: 80%;
-        bottom: -20rem;
+        bottom: -25rem;
         @include infinite-rotate-animation;
         
     }
@@ -61,9 +63,9 @@
     }
     li {
         list-style:none;
-        font-size: 64px;
+        font-size: 45px;
         color: black;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         
         a {
             text-decoration: none;
@@ -94,8 +96,17 @@
         &::after {
             content: url("../assets/images/random_flower.png");
             position: absolute; 
-            transform: scale(.5);
             right: -7%;
+            top: 30%;
+            animation: rotate-animation-random-flower 20s infinite linear;
+            @keyframes rotate-animation-random-flower {
+                from {
+                    transform: rotate(0deg) scale(.4);
+                }
+                to {
+                    transform: rotate(360deg) scale(.4);
+                }
+    }
             
         }
     }
@@ -104,7 +115,7 @@
             content: url("../assets/images/black-cat.png");
             position: absolute; 
             right: 18%;
-            top: 50%;
+            top: 60%;
             @include animation-float;
         }
         &::after {

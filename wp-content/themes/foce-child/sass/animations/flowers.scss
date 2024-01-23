@@ -3,12 +3,13 @@
 }
 
 .story h2::after {
-    transform-origin: 50% 70% 0;
     @include infinite-rotate-animation;
+    
 }
 
 #studio h2::after {
     @include infinite-rotate-animation;
+    
 }
 
 #studio h2::before {
