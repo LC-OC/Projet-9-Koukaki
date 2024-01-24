@@ -7,7 +7,7 @@ section.story #place {
      }
     #cloud_animation{
         @media #{$mobile} {
-            display: none;
+            margin-left: 1rem;
          }
         width: 100%;
         all: unset;
@@ -22,7 +22,10 @@ section.story #place {
             filter: blur(0.8rem);
         }
         #little_cloud {
-            margin-bottom: -6rem
+            margin-bottom: -6rem;
+            @media #{$mobile} {
+                margin-bottom: -1rem;
+             }
         }
     }
 }

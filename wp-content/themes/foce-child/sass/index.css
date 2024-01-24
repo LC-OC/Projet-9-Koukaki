@@ -484,7 +484,7 @@ section.story #place #cloud_animation {
 }
 @media screen and (max-width: 700px) {
   section.story #place #cloud_animation {
-    display: none;
+    margin-left: 1rem;
   }
 }
 section.story #place #cloud_animation .clouds {
@@ -492,6 +492,11 @@ section.story #place #cloud_animation .clouds {
 }
 section.story #place #cloud_animation #little_cloud {
   margin-bottom: -6rem;
+}
+@media screen and (max-width: 700px) {
+  section.story #place #cloud_animation #little_cloud {
+    margin-bottom: -1rem;
+  }
 }
 
 .title_section {
