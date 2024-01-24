@@ -2,7 +2,13 @@ section.story #place {
     background-image: url("../assets/images/Studio_Koukaki-image_place.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    @media #{$mobile} {
+        background-size: auto;
+     }
     #cloud_animation{
+        @media #{$mobile} {
+            display: none;
+         }
         width: 100%;
         all: unset;
         margin-top: 5rem;

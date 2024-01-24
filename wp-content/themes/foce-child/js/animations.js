@@ -45,15 +45,13 @@ animationTitleTwo();
 let clouds = document.getElementById("cloud_animation");
 let placeContainer = document.getElementById("place").getBoundingClientRect();
 console.log(placeContainer);
-/*
+
 window.addEventListener("scroll", () => {
   let { scrollY } = window;
-  console.log(scrollY);
   let cloudsPosition = Math.min(0.1 * scrollY, 300);
   clouds.style.transform = "translateX(" + cloudsPosition + "px)";
   // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
-*/
 
 /*
 const observerTest = new IntersectionObserver((entries) => {

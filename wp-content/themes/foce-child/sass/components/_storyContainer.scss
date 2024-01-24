@@ -1,0 +1,5 @@
+h2.title_section {
+    @media #{$mobile} {
+        margin-top: 2rem;
+     }
+}

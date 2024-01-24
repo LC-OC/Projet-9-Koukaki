@@ -4,12 +4,24 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 700px) {
+  #festival {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
 #festival h3 {
   background-image: url("../assets/images/orange_background_festival.png");
   text-align: left;
   padding: 5rem;
   width: 60%;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 700px) {
+  #festival h3 {
+    width: 100%;
+    line-height: normal;
+  }
 }
 #festival img {
   height: 150px;
@@ -30,9 +42,19 @@ section.banner #banner-video {
   top: 0;
   left: 0;
 }
+@media screen and (max-width: 700px) {
+  section.banner #banner-video {
+    display: none;
+  }
+}
 section.banner img {
   position: relative;
   animation: float 2s ease-in-out infinite;
+}
+@media screen and (max-width: 700px) {
+  section.banner img {
+    width: 90%;
+  }
 }
 @keyframes float {
   0% {
@@ -50,6 +72,11 @@ section.banner img {
   all: unset;
   width: 100%;
   margin: 6em 6em 2rem 6em;
+}
+@media screen and (max-width: 700px) {
+  #carousel_section {
+    margin: auto;
+  }
 }
 #carousel_section h3 {
   all: unset;
@@ -179,11 +206,28 @@ section.banner img {
     transform: translatey(0px);
   }
 }
+@media screen and (max-width: 700px) {
+  #menu-content img {
+    margin: auto;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #menu-content ul#menu-links {
+    margin: auto;
+    padding: 4rem 0;
+  }
+}
 #menu-content li {
   list-style: none;
   font-size: 45px;
   color: black;
   padding: 0.5rem 0;
+}
+@media screen and (max-width: 700px) {
+  #menu-content li {
+    padding: 2rem 0;
+  }
 }
 #menu-content li a {
   text-decoration: none;
@@ -191,6 +235,12 @@ section.banner img {
 #menu-content li a:hover {
   text-shadow: #FF5C00 1px 0 10px;
   color: black;
+}
+@media screen and (max-width: 700px) {
+  #menu-content li a:focus {
+    text-shadow: #FF5C00 1px 0 10px;
+    color: black;
+  }
 }
 #menu-content #link-story::before {
   content: url("../assets/images/purple-cat.png");
@@ -210,6 +260,12 @@ section.banner img {
     transform: translatey(0px);
   }
 }
+@media screen and (max-width: 700px) {
+  #menu-content #link-story::before {
+    left: 10%;
+    top: 25rem;
+  }
+}
 #menu-content #link-story::after {
   content: url("../assets/images/sunflower.png");
   position: absolute;
@@ -223,6 +279,12 @@ section.banner img {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  #menu-content #link-story::after {
+    top: 10%;
+    right: -15%;
   }
 }
 #menu-content #link-characters::after {
@@ -256,6 +318,11 @@ section.banner img {
   }
   100% {
     transform: translatey(0px);
+  }
+}
+@media screen and (max-width: 700px) {
+  #menu-content #link-place::before {
+    top: 70%;
   }
 }
 #menu-content #link-place::after {
@@ -302,6 +369,12 @@ section.banner img {
   opacity: 1;
   padding-top: 10rem;
   background-color: #FFF5E9;
+}
+
+@media screen and (max-width: 700px) {
+  h2.title_section {
+    margin-top: 2rem;
+  }
 }
 
 .story__article::after {
@@ -393,6 +466,11 @@ section.story #place {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 700px) {
+  section.story #place {
+    background-size: auto;
+  }
+}
 section.story #place #cloud_animation {
   width: 100%;
   all: unset;
@@ -403,6 +481,11 @@ section.story #place #cloud_animation {
   flex-direction: row;
   align-items: flex-end;
   z-index: 2;
+}
+@media screen and (max-width: 700px) {
+  section.story #place #cloud_animation {
+    display: none;
+  }
 }
 section.story #place #cloud_animation .clouds {
   filter: blur(0.8rem);

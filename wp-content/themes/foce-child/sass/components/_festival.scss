@@ -3,13 +3,20 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    @media #{$mobile} {
+        flex-direction: column;
+        margin-top: 2rem;
+     }
     h3 {
         background-image: url("../assets/images/orange_background_festival.png");
         text-align: left;
         padding: 5rem;
         width: 60%;
         text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-        
+        @media #{$mobile} {
+            width: 100%;
+            line-height: normal;
+         }
 }
     img {
         height: 150px;

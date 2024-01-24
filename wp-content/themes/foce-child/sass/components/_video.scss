@@ -1,17 +1,23 @@
 section.banner {
-    position: relative;
+position: relative;
   overflow: hidden;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   #banner-video {
+    @media #{$mobile} {
+       display: none;
+    }
         object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
     }
     img {
+        @media #{$mobile} {
+            width: 90%;
+         }
         position: relative;
         @include animation-float;
     }

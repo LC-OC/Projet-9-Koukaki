@@ -60,18 +60,36 @@
     img {
         margin-right: -6rem;
         @include animation-float;
+        @media #{$mobile} {
+            margin: auto;
+            width: 300px;
+          }
+    }
+    ul#menu-links {
+        @media #{$mobile} {
+            margin: auto;
+            padding: 4rem 0;
+          }
     }
     li {
         list-style:none;
         font-size: 45px;
         color: black;
         padding: 0.5rem 0;
-        
+        @media #{$mobile} {
+            padding: 2rem 0;
+          }
         a {
             text-decoration: none;
             &:hover {
                 text-shadow: #FF5C00 1px 0 10px;
                 color: black;
+            }
+            &:focus {
+                @media #{$mobile} {
+                    text-shadow: #FF5C00 1px 0 10px;
+                    color: black;
+                  }
             }
         }
         
@@ -83,6 +101,10 @@
             left: 22%;
             top: 19rem;
             @include animation-float;
+            @media #{$mobile} {
+               left: 10%; 
+               top: 25rem;
+              }
         }
         &::after {
             content: url("../assets/images/sunflower.png");
@@ -90,6 +112,10 @@
             right: 13%;
             top: 16%;
             @include infinite-rotate-animation;
+            @media #{$mobile} {
+                top: 10%;
+                right: -15%;
+            }
         }
     }
     #link-characters {
@@ -106,7 +132,7 @@
                 to {
                     transform: rotate(360deg) scale(.4);
                 }
-    }
+            }
             
         }
     }
@@ -117,6 +143,9 @@
             right: 18%;
             top: 60%;
             @include animation-float;
+            @media #{$mobile} {
+                top: 70%;   
+            }
         }
         &::after {
             content: url("../assets/images/Flower.png");

@@ -1,9 +1,12 @@
 @import "mixins/mixins.scss";
 
+@import "./settings.scss";
+
 @import "components/festival.scss";
 @import "components/video.scss";
 @import "components/carousel.scss";
 @import "components/menu.scss";
+@import "components/storyContainer.scss";
 
 @import "animations/flowers.scss";
 @import "animations/clouds.scss";
