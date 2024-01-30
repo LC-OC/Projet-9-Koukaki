@@ -20,6 +20,7 @@ if ( get_stylesheet() !== get_template() ) {
 
 
 function scripts() {
+    wp_enqueue_script( 'script-skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'script-animation', get_stylesheet_directory_uri() . '/js/animations.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'script-font-awesome', 'https://kit.fontawesome.com/019b68e105.js', array( 'jquery' ),'' );

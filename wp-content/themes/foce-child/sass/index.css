@@ -574,4 +574,24 @@ section.story #place #cloud_animation #little_cloud {
     transform: translate(0px, 0);
     opacity: 1;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/* Styles to make skrollable work. Copy these to your file. */
+.skrollable {
+  position: fixed;
+  z-index: 100;
+}
+
+.skrollr-mobile .skrollable {
+  position: absolute;
+}
+
+.skrollable .skrollable {
+  position: absolute;
+}
+
+.skrollable .skrollable .skrollable {
+  position: static;
+}
+
+/* End skrollable styles *//*# sourceMappingURL=index.css.map */

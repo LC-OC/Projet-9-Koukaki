@@ -43,16 +43,23 @@ animationTitleTwo();
 
 // cloud animation
 let clouds = document.getElementById("cloud_animation");
-let placeContainer = document.getElementById("place").getBoundingClientRect();
-console.log(placeContainer);
+let placeContainer = document.getElementById("place");
+let placeContainerTop = placeContainer.getBoundingClientRect().top;
+let placeContainerBottom = placeContainer.getBoundingClientRect().bottom;
+console.log(placeContainerTop);
+console.log(placeContainerBottom);
+let windowHeight = window.innerHeight;
 
+let positionCloudsContainer = placeContainerTop + window.scrollY;
+console.log(positionCloudsContainer);
+/*
 window.addEventListener("scroll", () => {
   let { scrollY } = window;
   let cloudsPosition = Math.min(0.1 * scrollY, 300);
   clouds.style.transform = "translateX(" + cloudsPosition + "px)";
   // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
-
+*/
 /*
 const observerTest = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -71,6 +78,22 @@ const observerTest = new IntersectionObserver((entries) => {
 
 observerTest.observe(document.querySelector("#place"));
 */
+// clouds animation with skrollr
+
+var s = skrollr.init();
+
+// parallax effect title video
+
+let titleVideo = document.querySelector("#title_video");
+let videoContainer = document.querySelector(".banner");
+
+window.addEventListener("scroll", () => {
+  let { scrollY } = window;
+  let titlePosition = Math.min(0.1 * scrollY, 300);
+  titleVideo.style.transform = "translateY(" + titlePosition + "px)";
+  // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
+});
+
 // menu
 
 let menuIconBurger = document.getElementById("icon-menu-burger");
