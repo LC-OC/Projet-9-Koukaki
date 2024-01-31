@@ -7,7 +7,8 @@ section.story #place {
      }
     #cloud_animation{
         @media #{$mobile} {
-            margin-left: 1rem;
+            margin-left: 5rem;
+            margin-top: 8rem;
          }
         width: 100%;
         all: unset;
@@ -18,8 +19,11 @@ section.story #place {
         flex-direction: row;
         align-items: flex-end;
         z-index: 2;
-        .clouds {
+        img.clouds {
             filter: blur(0.8rem);
+            @media #{$mobile} {
+                max-width: 40%;
+             }
         }
         #little_cloud {
             margin-bottom: -6rem;

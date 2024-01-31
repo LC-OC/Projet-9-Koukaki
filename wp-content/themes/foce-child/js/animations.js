@@ -41,17 +41,17 @@ function animationTitleTwo() {
 animationTitleOne();
 animationTitleTwo();
 
-// cloud animation
+// window & elements informations
 let clouds = document.getElementById("cloud_animation");
 let placeContainer = document.getElementById("place");
 let placeContainerTop = placeContainer.getBoundingClientRect().top;
 let placeContainerBottom = placeContainer.getBoundingClientRect().bottom;
-console.log(placeContainerTop);
-console.log(placeContainerBottom);
 let windowHeight = window.innerHeight;
+let videoTitle = document.querySelector(".banner");
+console.log(videoTitle.getBoundingClientRect().top + window.scrollY);
+console.log(videoTitle.getBoundingClientRect().bottom + window.scrollY);
 
 let positionCloudsContainer = placeContainerTop + window.scrollY;
-console.log(positionCloudsContainer);
 /*
 window.addEventListener("scroll", () => {
   let { scrollY } = window;
@@ -60,26 +60,8 @@ window.addEventListener("scroll", () => {
   // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
 */
-/*
-const observerTest = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      window.addEventListener("scroll", () => {
-        let { scrollY } = window;
-        let cloudsPosition = Math.min(0.1 * scrollY, 300);
-        clouds.style.transform = "translateX(" + cloudsPosition + "px)";
-        console.log(cloudsPosition);
-        // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
-      });
-      return; // if we added the class, exit the function
-    }
-  });
-});
 
-observerTest.observe(document.querySelector("#place"));
-*/
 // clouds animation with skrollr
-
 var s = skrollr.init();
 
 // parallax effect title video

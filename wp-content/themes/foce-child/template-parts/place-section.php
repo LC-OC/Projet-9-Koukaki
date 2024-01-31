@@ -1,5 +1,5 @@
 <article id="place" class="animation_container">
-    <div id="cloud_animation"  data-1400="left:0%;"  data-2250="left:30%";>
+    <div id="cloud_animation"  data-1500="left:0%;"  data-2190="left:30%";>
         <img class="clouds" id="little_cloud" src="wp-content\themes\foce-child\assets\images\little_cloud.png" alt="little cloud">
         <img class="clouds"  id="big_cloud" src="wp-content\themes\foce-child\assets\images\big_cloud.png" alt="big cloud"></div>
     

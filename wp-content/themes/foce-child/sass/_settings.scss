@@ -1,3 +1,12 @@
 // Media Size
 
 $mobile: "screen and (max-width: 700px)";
+
+
+// skrollr mobile
+* {
+    @media #{$mobile} {
+        touch-action: manipulation; 
+     }
+    
+  }

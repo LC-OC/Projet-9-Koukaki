@@ -5,6 +5,7 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
   #banner-video {
     @media #{$mobile} {
        display: none;
@@ -14,11 +15,12 @@ position: relative;
         top: 0;
         left: 0;
     }
-    img {
+    img#title_video {
+        top: 30%;
+        position: absolute;
         @media #{$mobile} {
             width: 90%;
          }
-        position: relative;
         @include animation-float;
     }
 }

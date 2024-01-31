@@ -1,3 +1,9 @@
+@media screen and (max-width: 700px) {
+  * {
+    touch-action: manipulation;
+  }
+}
+
 #festival {
   display: flex;
   width: 100%;
@@ -34,6 +40,7 @@ section.banner {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 section.banner #banner-video {
   -o-object-fit: cover;
@@ -47,12 +54,13 @@ section.banner #banner-video {
     display: none;
   }
 }
-section.banner img {
-  position: relative;
+section.banner img#title_video {
+  top: 30%;
+  position: absolute;
   animation: float 2s ease-in-out infinite;
 }
 @media screen and (max-width: 700px) {
-  section.banner img {
+  section.banner img#title_video {
     width: 90%;
   }
 }
@@ -484,11 +492,17 @@ section.story #place #cloud_animation {
 }
 @media screen and (max-width: 700px) {
   section.story #place #cloud_animation {
-    margin-left: 1rem;
+    margin-left: 5rem;
+    margin-top: 8rem;
   }
 }
-section.story #place #cloud_animation .clouds {
+section.story #place #cloud_animation img.clouds {
   filter: blur(0.8rem);
+}
+@media screen and (max-width: 700px) {
+  section.story #place #cloud_animation img.clouds {
+    max-width: 40%;
+  }
 }
 section.story #place #cloud_animation #little_cloud {
   margin-bottom: -6rem;
