@@ -61,8 +61,18 @@ window.addEventListener("scroll", () => {
 });
 */
 
-// clouds animation with skrollr
-var s = skrollr.init();
+// init skrollr, remove when mobile version
+jQuery(function () {
+  if (jQuery(window).width() > 700) {
+    skrollr.init();
+  }
+
+  jQuery(window).on("resize", function () {
+    if (jQuery(window).width() <= 700) {
+      skrollr.init().destroy();
+    }
+  });
+});
 
 // parallax effect title video
 
@@ -99,3 +109,5 @@ menuIconClose.addEventListener("click", hideMenu);
 menuLinks.forEach(function (menuLink) {
   menuLink.addEventListener("click", hideMenu);
 });
+
+// flowers
