@@ -46,30 +46,33 @@ let clouds = document.getElementById("cloud_animation");
 let placeContainer = document.getElementById("place");
 let placeContainerTop = placeContainer.getBoundingClientRect().top;
 let placeContainerBottom = placeContainer.getBoundingClientRect().bottom;
-let windowHeight = window.innerHeight;
-let videoTitle = document.querySelector(".banner");
-console.log(videoTitle.getBoundingClientRect().top + window.scrollY);
-console.log(videoTitle.getBoundingClientRect().bottom + window.scrollY);
-
 let positionCloudsContainer = placeContainerTop + window.scrollY;
 /*
 window.addEventListener("scroll", () => {
   let { scrollY } = window;
   let cloudsPosition = Math.min(0.1 * scrollY, 300);
   clouds.style.transform = "translateX(" + cloudsPosition + "px)";
-  // clouds.style.transform = "translateX(" + 0.1 * scrollY + "px)";
 });
 */
 
 // init skrollr, remove when mobile version
+
 jQuery(function () {
-  if (jQuery(window).width() > 700) {
+  function skrollrInit() {
     skrollr.init();
   }
 
+  if (jQuery(window).width() > 700) {
+    skrollrInit();
+  }
   jQuery(window).on("resize", function () {
-    if (jQuery(window).width() <= 700) {
-      skrollr.init().destroy();
+    var _skrollr = skrollr.get();
+    var windowWidth = jQuery(window).width();
+
+    if (windowWidth <= 700 && _skrollr !== undefined) {
+      _skrollr.destroy();
+    } else if (windowWidth > 700 && _skrollr === undefined) {
+      skrollrInit();
     }
   });
 });
