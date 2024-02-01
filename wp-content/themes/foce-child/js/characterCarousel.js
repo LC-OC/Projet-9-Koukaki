@@ -2,7 +2,7 @@ const sampleSlider = new Swiper(".sample-slider", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: 1.5,
   spaceBetween: 10,
   loop: "true",
   coverflowEffect: {
@@ -11,5 +11,13 @@ const sampleSlider = new Swiper(".sample-slider", {
     depth: 0,
     modifier: 0,
     slideShadows: false,
+  },
+  breakpoints: {
+    700: {
+      slidesPerView: 3,
+    },
+  },
+  keyboard: {
+    enabled: true,
   },
 });
