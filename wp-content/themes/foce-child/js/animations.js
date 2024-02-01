@@ -112,5 +112,3 @@ menuIconClose.addEventListener("click", hideMenu);
 menuLinks.forEach(function (menuLink) {
   menuLink.addEventListener("click", hideMenu);
 });
-
-// flowers
