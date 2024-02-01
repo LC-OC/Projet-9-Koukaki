@@ -4,12 +4,9 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
-            <video playsinline autoplay muted loop id="banner-video">
-                <source src="wp-content\themes\foce-child\assets\video\koukaki-header-video.mp4">
-            </video>
-            <img data-0="top:30%;" data-1000="top:100%;"   id="title_video"src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-        </section>
+        <?php 
+            get_template_part('./template-parts/banner-section');
+        ?>
         <section id="story-koukaki" class="story animation_container">
             <h2 class="title_section"><div class="first_part_title_animation">L'histoire</div></h2>
             <article id="characters-koukaki" class="story__article">
